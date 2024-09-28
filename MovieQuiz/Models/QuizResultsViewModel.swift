@@ -1,9 +1,3 @@
-//
-//  QuizResultsViewModel.swift
-//  MovieQuiz
-//
-//  Created by sm on 12.09.2024.
-//
 
 import Foundation
 
