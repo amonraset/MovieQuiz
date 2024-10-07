@@ -15,7 +15,6 @@ class AlertPresenter: AlertPresenterProtocol {
         self.delegate = delegate
     }
     func alertEnd(alend: AlertModel) {
-        print ("ALERT!!!!")
         
         let alert = UIAlertController(
             title: alend.title,

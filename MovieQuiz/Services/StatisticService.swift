@@ -6,7 +6,6 @@ final class StatisticService: StatisticServiceProtocol {
     
     private enum Keys: String {
         case correctAnswers
-        //  case bestGame___________________________________
         case gamesCount
         
         enum BestGame: String {

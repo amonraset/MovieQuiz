@@ -56,17 +56,6 @@ class QuestionFactory: QuestionFactoryProtocol {
     //            correctAnswer: false),
     //    ]
     
-    
-    //    func requestNextQuestion() {
-    //        print ("сработала function requestNextQuestion ")
-    //        guard let index = (0..<questions.count).randomElement() else {
-    //            delegate?.didReceiveNextQuestion(question: nil)
-    //            return
-    //        }
-    //        let question = questions[safe: index]
-    //        delegate?.didReceiveNextQuestion(question: question)
-    //    }
-    
     func requestNextQuestion() {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
@@ -75,12 +64,6 @@ class QuestionFactory: QuestionFactoryProtocol {
             guard let movie = self.movies[safe: index] else { return }
             
             var imageData = Data()
-            
-//                       do {
-//                            imageData = try Data(contentsOf: movie.imageURL)
-//                        } catch {
-//                            print("Failed to load image")
-//                        }
             
             do {
                 imageData = try Data(contentsOf: movie.resizedImageURL)
