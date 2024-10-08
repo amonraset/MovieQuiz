@@ -1,4 +1,5 @@
 
+
 import UIKit
 
 class AlertPresenter: AlertPresenterProtocol {
@@ -9,14 +10,15 @@ class AlertPresenter: AlertPresenterProtocol {
         self.delegate = delegate
     }
     func alertEnd(alend: AlertModel) {
+        
         let alert = UIAlertController(
             title: alend.title,
             message: alend.message,
             preferredStyle: .alert)
-        let action = UIAlertAction(title: alend.buttonText, style: .default) {_ in
+        let action = UIAlertAction(title: alend.buttonText, style: .default) { _ in
             alend.completion()
         }
-        alert.addAction(action)
+        alert.addAction(action) //создание кнопки
         delegate?.present(alert, animated: true, completion: nil)
     }
 }

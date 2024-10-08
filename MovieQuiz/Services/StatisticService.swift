@@ -1,6 +1,7 @@
 
 import Foundation
 
+
 final class StatisticService: StatisticServiceProtocol {
     
     private enum Keys: String {
@@ -55,9 +56,11 @@ final class StatisticService: StatisticServiceProtocol {
             return  (Double(correctAnswers)/(Double(bestGame.total * gamesCount))) * 100
         }
         else {return 0}
+        
     }
     
     func store(correct count: Int, total amount: Int) {
+        print ("статистика")
         correctAnswers += count
         gamesCount += 1
         let newGame = GameResult(correct: count, total: amount, date: Date())
