@@ -1,15 +1,10 @@
-//
-//  AlertPresenter.swift
-//  MovieQuiz
-//
-//  Created by sm on 21.09.2024.
-//
+
 
 import UIKit
 
 class AlertPresenter: AlertPresenterProtocol {
-
-     private weak var delegate: UIViewController?
+    
+    private weak var delegate: UIViewController?
     
     init(delegate: UIViewController?) {
         self.delegate = delegate
@@ -22,9 +17,9 @@ class AlertPresenter: AlertPresenterProtocol {
             preferredStyle: .alert)
         let action = UIAlertAction(title: alend.buttonText, style: .default) { _ in
             alend.completion()
-    }
-    alert.addAction(action) //создание кнопки
-    delegate?.present(alert, animated: true, completion: nil)
         }
+        alert.addAction(action) //создание кнопки
+        delegate?.present(alert, animated: true, completion: nil)
+    }
 }
-                      
+
