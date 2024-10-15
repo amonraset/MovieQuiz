@@ -1,9 +1,3 @@
-//
-//  GameResult.swift
-//  MovieQuiz
-//
-//  Created by sm on 23.09.2024.
-//
 
 import Foundation
 

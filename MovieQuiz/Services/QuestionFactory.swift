@@ -56,6 +56,17 @@ class QuestionFactory: QuestionFactoryProtocol {
     //            correctAnswer: false),
     //    ]
     
+    
+    //    func requestNextQuestion() {
+    //        print ("сработала function requestNextQuestion ")
+    //        guard let index = (0..<questions.count).randomElement() else {
+    //            delegate?.didReceiveNextQuestion(question: nil)
+    //            return
+    //        }
+    //        let question = questions[safe: index]
+    //        delegate?.didReceiveNextQuestion(question: question)
+    //    }
+    
     func requestNextQuestion() {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
@@ -82,7 +93,7 @@ class QuestionFactory: QuestionFactoryProtocol {
             
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.delegate?.didReceiveNextQuestion(question: question)
+                self.delegate?.didRecieveNextQuestion(question: question)
             }
         }
     }

@@ -60,7 +60,6 @@ final class StatisticService: StatisticServiceProtocol {
     }
     
     func store(correct count: Int, total amount: Int) {
-        print ("статистика")
         correctAnswers += count
         gamesCount += 1
         let newGame = GameResult(correct: count, total: amount, date: Date())
