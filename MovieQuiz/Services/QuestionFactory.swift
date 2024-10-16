@@ -55,6 +55,7 @@ class QuestionFactory: QuestionFactoryProtocol {
     //            text: "Рейтинг этого фильма больше чем 6?",
     //            correctAnswer: false),
     //    ]
+
     
     func requestNextQuestion() {
         DispatchQueue.global().async { [weak self] in
@@ -82,7 +83,7 @@ class QuestionFactory: QuestionFactoryProtocol {
             
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.delegate?.didReceiveNextQuestion(question: question)
+                self.delegate?.didRecieveNextQuestion(question: question)
             }
         }
     }
