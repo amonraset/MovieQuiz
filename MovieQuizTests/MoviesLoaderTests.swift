@@ -22,7 +22,7 @@ class MoviesLoaderTests: XCTestCase {
                 XCTAssertEqual(movies.items.count, 2)
                 expectation.fulfill()
             case .failure:
-                XCTFail("Unexpected failure")
+                XCTFail("Download error")
             }
         }
         waitForExpectations(timeout: 1)

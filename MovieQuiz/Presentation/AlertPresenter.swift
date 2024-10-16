@@ -2,8 +2,8 @@
 import UIKit
 
 class AlertPresenter: AlertPresenterProtocol {
-
-     private weak var delegate: UIViewController?
+    
+    private weak var delegate: UIViewController?
     
     init(delegate: UIViewController?) {
         self.delegate = delegate
@@ -15,7 +15,7 @@ class AlertPresenter: AlertPresenterProtocol {
             title: alend.title,
             message: alend.message,
             preferredStyle: .alert)
-            alert.view.accessibilityIdentifier = "alert"
+        alert.view.accessibilityIdentifier = "alert"
         
         let action = UIAlertAction(title: alend.buttonText, style: .default) { _ in alend.completion()}
         
@@ -23,4 +23,4 @@ class AlertPresenter: AlertPresenterProtocol {
         delegate?.present(alert, animated: true, completion: nil)
     }
 }
-                      
+

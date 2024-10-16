@@ -1,8 +1,8 @@
 //
 //  ArrayTests.swift
-//  ArrayTests
+//  MovieQuiz
 //
-//  Created by sm on 08.10.2024.
+//  Created by sm on 16.10.2024.
 //
 
 import XCTest
@@ -10,15 +10,18 @@ import XCTest
 @testable import MovieQuiz
 
 class ArrayTests: XCTestCase {
-    func testGetValueInRange() throws {
+    func testGetValueInRange() throws { 
         // Given
-        let array =[1, 1, 2, 3, 5]
+        let array = [1, 1, 2, 3, 5]
+        
         // When
-        let value = array[safe:2]
+        let value = array[safe: 2]
+        
         // Then
-        XCTAssertNil(value)
+        XCTAssertNotNil(value)
         XCTAssertEqual(value, 2)
     }
+    
     func testGetValueOutOfRange() throws {
         // Given
         let array = [1, 1, 2, 3, 5]
